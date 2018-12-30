@@ -50,6 +50,10 @@ set showmatch
 set directory^=$HOME/.vim/tmp//
 set vb
 set laststatus=2
+set visualbell
+set t_vb=
+
+hi Normal guibg=NONE ctermbg=NONE
 
 let g:elite_mode=1
 let g:airline#extensions#tabline#enabled=1
