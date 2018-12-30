@@ -21,6 +21,8 @@ Plugin 'itchyny/vim-gitbranch'
 Plugin 'itchyny/lightline.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'editorconfig/editorconfig'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 filetype plugin indent on
