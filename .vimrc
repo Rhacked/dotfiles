@@ -21,7 +21,8 @@ Plugin 'itchyny/vim-gitbranch'
 Plugin 'itchyny/lightline.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'blueyed/smarty.vim'
-Plugin 'editorconfig/editorconfig-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 filetype plugin indent on
@@ -49,6 +50,10 @@ set showmatch
 set directory^=$HOME/.vim/tmp//
 set vb
 set laststatus=2
+set visualbell
+set t_vb=
+
+hi Normal guibg=NONE ctermbg=NONE
 
 let g:elite_mode=1
 let g:airline#extensions#tabline#enabled=1
