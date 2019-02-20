@@ -20,6 +20,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'itchyny/vim-gitbranch'
 Plugin 'itchyny/lightline.vim'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'blueyed/smarty.vim'
 Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
