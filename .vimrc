@@ -41,6 +41,7 @@ set smarttab
 set hlsearch
 set mouse=a
 set smartcase
+set ignorecase
 set incsearch
 set showmatch
 set matchtime=0
