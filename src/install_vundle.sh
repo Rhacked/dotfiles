@@ -27,7 +27,7 @@ ln -s ../.vimrc ~/.vimrc
 echo "This will install Vundle and plugins on your system. Do you want to continue?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) download_vundle; install_plugins; symlink_dotfiles; break;;
+        Yes ) download_vundle; symlink_dotfiles; install_plugins; break;;
         No ) exit;;
     esac
 done
