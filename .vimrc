@@ -22,7 +22,9 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'blueyed/smarty.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 filetype plugin indent on
