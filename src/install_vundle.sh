@@ -1,12 +1,27 @@
-#/bin/bash
+#/bin/sh
 
-#Download Vundle
+#Downloads vundle to ~/.vim/bundle/Vundle.vim
+download_vundle()
+{
 if [-d "~/.vim/bundle/Vundle.vim"]
 then
+    echo "Downloading Vundle.vim to ~/.vim/bundle/Vundle.vim"
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 else
     echo "Vundle is already installed"
 fi
+}
 
-#Install plugins
+#Installs vundle plugins from .vimrc
+install_plugins()
+{
 vim +PluginInstall +qall
+}
+
+echo "This will install Vundle and plugins on your system. Do you want to continue?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) download_vundle; install_plugins; break;;
+        No ) exit;;
+    esac
+done
