@@ -9,7 +9,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'BufOnly.vim'
@@ -25,6 +24,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'w0rp/ale'
+Plugin 'prettier/vim-prettier'
 
 call vundle#end()
 filetype plugin indent on
@@ -58,6 +58,8 @@ set t_vb=
 
 hi Normal guibg=NONE ctermbg=NONE
 
+let g:EditorConfig_core_mode = 'external_command'
+
 let g:elite_mode=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -78,6 +80,10 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 if exists('$TMUX')
     hi Search cterm=NONE ctermfg=grey ctermbg=blue
 endif
+
+" run prettier on save
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
 
 " Neocomplete settings
 let g:acp_enableAtStartup = 0
